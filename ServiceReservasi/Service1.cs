@@ -127,7 +127,7 @@ namespace ServiceReservasi
             string a = "gagal";
             try
             {
-                string sql = "delete from Pemesanan where ID_reservasi =" + IDPemesanan + "";
+                string sql = "delete from dbo.Pemesanan where ID_reservasi = '" + IDPemesanan + "'";
                 connection = new SqlConnection(constring);
                 com = new SqlCommand(sql, connection);
                 connection.Open();
