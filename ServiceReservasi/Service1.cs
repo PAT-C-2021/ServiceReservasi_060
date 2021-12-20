@@ -103,7 +103,7 @@ namespace ServiceReservasi
             string a = "gagal";
             try
             {
-                string sql = "update dbo.Pemesanan set Nama_customer = '" + NamaCustomer + "', No_telepon = '" + No_telpon + "'" +
+                string sql = "update dbo.Pemesanan set Nama_customer = '" + NamaCustomer + "', No_telpon = '" + No_telpon + "'" +
                     " where ID_reservasi = '" + IDPemesanan + "' ";
                 connection = new SqlConnection(constring);
                 com = new SqlCommand(sql, connection);
@@ -154,7 +154,7 @@ namespace ServiceReservasi
             List<Pemesanan> pemesanans = new List<Pemesanan>();
             try
             {
-                string sql = "select ID_reservasi, Nama_customer, No_telepon, " +
+                string sql = "select ID_reservasi, Nama_customer, No_telpon, " +
                     "Jumlah_pemesanan, Nama_Lokasi from dbo.Pemesanan p join dbo.Lokasi l on p.ID_lokasi = l.ID_lokasi";
                 connection = new SqlConnection(constring);
                 com = new SqlCommand(sql, connection);
